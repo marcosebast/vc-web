@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>ViaCelular Dev: Documentación &amp; APis</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#FF8F00">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="ViaCelular">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="keywords" content="viacelular, developers, desarrolladores, via celular, notificaciones de vencimiento, resumen tarjeta, boleta sky, boleta bancomer, boleta banamex," />
+	<meta name="description" content="Desarrolla nuevas funcionalidades, integra ViaCelular con servicios de terceros o crea algo totalmente nuevo con esta API." />
+  <link rel="shortcut icon" href="images/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+	<link rel="stylesheet" href="css/bootstrap-black.css">
+	<link rel="stylesheet" href="css/bootstrap-theme-black.css">
+	<script src="js/bootstrap.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script type="text/javascript">
+		//Cosas de Google//
+	</script>
+</head>
+<body>
+  <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MMF9HS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MMF9HS');</script>
+<!-- End Google Tag Manager -->
+	<nav id="header" class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+  			<div class="col-xs-12 col-sm-3 header-izq">
+    		<!--logo-->
+    			<a href="#"><img src="images/mx/svg-viacelular-dev-ads-white.svg" alt="ViaCelular" title="ViaCelular"></a>
+  			</div>
+  			<div class="col-xs-12 col-sm-9 header-der">
+    		<!--enlaces-->
+          <ul class="nav nav-pills navbar-right">
+            <li><a href="index.html">Usuarios</a></li>
+            <li><a href="business.html">Business</a></li>
+            <!-- <li role="presentation" class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      Dropdown <span class="caret"></span>
+             </a>
+               <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li> -->
+            <li><a class="gp-nav" href="#"><img src="images/mx/disponible-google-play.svg"></a></li>
+          </ul>
+  			</div>
+  		</div>
+	</nav>
+  <!-- Principal -->
+  <div class="naranja-dev">
+    <div class="container">
+      <div class="col-xs-12">
+        <div class="col-xs-12 col-sm-12 col-md-5 texto-naranja">
+          <h2 class="title-naranja">ViaCelular <span style="font-weight:200; ">Developers</span></h2>
+          <p class="lead subtitle-naranja" style="line-height: 145%;">Desarrolla nuevas funcionalidades, integra ViaCelular con servicios de terceros o crea algo totalmente nuevo con esta API.</p>
+          <div class="col-xs-12 col-sm-6 col-md-7 col-lg-6 gp-place">
+            <a href="http://docs.companies2.apiary.io/" target="_blank"><button type="button" class="btn btn-primary btn-lg">Documentación</button></a>
+          </div>
+           <div style="text-align: left;" class="col-xs-12 col-sm-6 col-md-5 col-lg-6 gp-place">
+            <a href="#dev" target="_blank"><button type="button" class="btn btn-transparent btn-lg">Conocer más</button></a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-7 dev-naranja">
+          <div class="col-xs-2 col-md-1">
+            <p class="code code-number">01</p>
+            <p class="code code-number">02</p>
+            <p class="code code-number">03</p>
+            <p class="code code-number">04</p>
+            <p class="code code-number">05</p>
+            <p class="code code-number">06</p>
+            <p class="code code-number">07</p>
+            <p class="code code-number">08</p>
+            <p class="code code-number">09</p>
+          </div>
+          <div class="col-xs-10">
+            <p class="code code-not">{</p>
+            <p class="code">"phone"<span class="code-not">:</span>"2616791577"<span class="code-not">,</span></p>
+            <p class="code">
+    "msg"<span class="code-not">:</span>"Comienza a crear"<span class="code-not">,</span></p>
+            <p class="code">"ttd"<span class="code-not">:</span><span class="code-value">1</span><span class="code-not">,</span></p>
+            <p class="code">"countryCode"<span class="code-not">:</span>"AR"<span class="code-not">,</span></p>
+            <p class="code">"type"<span class="code-not">:</span>"Hola!<span class="code-not">,</span></p>
+            <p class="code">"channel"<span class="code-not">:</span>"t"<span class="code-not">,</span></p>
+            <p class="code">"flags"<span class="code-not">:</span>"3"</p>
+            <p class="code code-not">}</p>
+          </div>       
+        </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Contenidos -->
+<div id="dev" class="parallax-container" data-parallax="scroll" data-bleed="10" data-speed="0.5" data-bleed="30" data-image-src="images/mx/texture-developers.png" data-natural-width="1490">
+  <div class="container">
+    <div class="col-xs-12 hideme">
+      <h1 style="margin-bottom: 0px;" class="title-leader">Simple, fácil y sin costos.</h1>
+    </div>
+    <!-- 01 -->
+    <div class="col-xs-12 col-sm-6 columna-content hideme">
+      <div class="col-xs-12 columna-shadow-dev">
+        <div class="col-xs-12 feat-01-dev featuring-content-dev"></div>
+        <div class="col-xs-12 info-content-dev">
+          <h3>Fácil de comprender, fácil de implementar</h3>
+          <p>Basada en los estándares de API Rest.</p>
+        </div>
+      </div>
+    </div>
+    <!-- 02 -->
+    <div class="col-xs-12 col-sm-6 columna-content hideme">
+      <div class="col-xs-12 columna-shadow-dev">
+        <div class="col-xs-12 feat-02-dev featuring-content-dev"></div>
+        <div class="col-xs-12 info-content-dev">
+          <h3>Escalable e internacional</h3>
+          <p>Funciona en todo el Mundo (menos en la Antártida :P)</p>
+        </div>
+      </div>
+    </div>
+    <!-- 03 -->
+  </div>
+</div>
+    <!-- fin columnas -->
+<div id="black-dev" class="parallax-container" data-parallax="scroll" data-bleed="10" data-speed="0.5" data-bleed="30" data-image-src="images/mx/texture-background-black.jpg" data-natural-width="1490">
+  <div class="container">
+    <div id="companies-h1" class="col-xs-12">
+      <h1 class="title-leader-dev">Empieza a crear hoy</h1>
+       <p class="lead">Conoce la documentación de funciones para empresas de ViaCelular y comienza a desarrollar soluciones.</p>
+       <a href="http://docs.companies2.apiary.io/" target="_blank"><button type="button" class="btn btn-primary btn-lg">Conocer documentación</button></a>
+    </div>
+    </div>
+    <!-- fin empresas -->
+  </div>
+</div>
+<div id="work-us">
+  <div class="container hideme">
+    <div class="col-xs-12 col-sm-6 center-illustration">
+      <img class="hideme" src="images/svg/work-us.svg" style="max-width: 70%;">
+    </div>
+    <div class="col-xs-12 col-sm-6 text-work">
+      <h2>Trabaja con nosotros.</h2>
+      <p class="lead">Conocer sobre Android, MogoDB, Node js, Angular?<br>Tenemos un lugar para vos.</p>
+      <a href="#descargar" target="_blank"><button type="button" class="btn btn-primary btn-default">Envía tu CV</button></a>
+    </div>
+  </div>
+</div>
+  <!-- Footer -->
+  <div class="footer-vc">
+    <div class="container">
+      <div class="col-xs-12 col-sm-6 footer-vc-der">
+        <span>© Tween S.A. · 2015 · Hecho en Mendoza</span>
+      </div>
+    </div>
+  </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/headroom.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+    (function() {
+      var header = document.querySelector("#header");
+      if(window.location.hash) {
+      header.classList.add("slide--up");
+      }
+    new Headroom(header, {
+        tolerance: {
+          down : 15,
+          up : 15
+        },
+        offset : 205,
+        classes: {
+          initial: "slide",
+          pinned: "slide--reset",
+          unpinned: "slide--up"
+        }
+    }).init();
+
+}());
+    </script>
+    <script>
+    $(document).ready(function() {
+    
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},400);     
+            }
+          }); 
+        });
+      });
+    </script>
+    <script>
+      $('a[href^="#"]').on('click', function(event) {
+
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 700);
+        }
+      });
+    </script>
+    <script>
+      window.Intercom('boot', {
+      app_id: "temcm6rd"
+      });
+    </script>
+</body>
+</html>
